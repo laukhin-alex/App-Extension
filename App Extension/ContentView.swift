@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var tabSelection: Int = 0
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $tabSelection) {
+            SuffixIteratorView()
+                .tag(0)
+                .tabItem {
+                    Label("Suffix", systemImage: "textformat.abc.dottedunderline")
+                }
+
+            TestingView()
+                .tag(1)
+                .tabItem {
+                    Label("Test", systemImage: "testtube.2")
+                }
+        }
     }
+
+
 }
 
 struct ContentView_Previews: PreviewProvider {
