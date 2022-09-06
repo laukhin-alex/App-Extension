@@ -6,26 +6,47 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
-    @State var tabSelection: Int = 0
+    @State var tabSelection: Int = 1
+    @AppStorage("emoji", store: UserDefaults(suiteName: "group.Nothing.App-Extension"))
+    var emojiData = Data()
+
 
     var body: some View {
-        TabView(selection: $tabSelection) {
-            SuffixIteratorView()
-                .tag(0)
-                .tabItem {
-                    Label("Suffix", systemImage: "textformat.abc.dottedunderline")
-                }
-
-            TestingView()
-                .tag(1)
-                .tabItem {
-                    Label("Test", systemImage: "testtube.2")
-                }
-        }
+        Button(action: {
+            print("Action")
+            save(EmojiProvider.random())
+            WidgetCenter.shared.reloadTimelines(ofKind: "TestingWidget")
+        }, label: {
+            Text("Tap me!")
+        })
     }
 
+    private func save(_ emoji: EmojiDetails) {
+        guard let data = try? JSONEncoder().encode(emoji) else {
+            return
+        }
+        emojiData = data
+    }
+
+
+
+//        TabView(selection: $tabSelection) {
+//            SuffixIteratorView()
+//                .tag(0)
+//                .tabItem {
+//                    Label("Suffix", systemImage: "textformat.abc.dottedunderline")
+//                }
+//
+//            TestingView()
+//                .tag(1)
+//                .tabItem {
+//                    Label("Test", systemImage: "testtube.2")
+//                }
+//        }
+//}
 
 }
 

@@ -12,6 +12,10 @@
 		1F081A6928C770D1004B0094 /* TestingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F081A6828C770D1004B0094 /* TestingWidget.swift */; };
 		1F081A6B28C770D3004B0094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F081A6A28C770D3004B0094 /* Assets.xcassets */; };
 		1F081A6F28C770D3004B0094 /* TestingWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F081A6128C770D1004B0094 /* TestingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1F081A7428C77193004B0094 /* SuffixIteratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42CF28C7604D006B2A90 /* SuffixIteratorView.swift */; };
+		1F081A7528C772B2004B0094 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D728C760EA006B2A90 /* TestingView.swift */; };
+		1F081A7628C772BE004B0094 /* SuffixIteratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D328C76084006B2A90 /* SuffixIteratorViewModel.swift */; };
+		1F081A7728C772C2004B0094 /* TestingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D928C760FA006B2A90 /* TestingViewModel.swift */; };
 		1F4A42C228C76013006B2A90 /* App_ExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42C128C76013006B2A90 /* App_ExtensionApp.swift */; };
 		1F4A42C428C76013006B2A90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42C328C76013006B2A90 /* ContentView.swift */; };
 		1F4A42C628C76015006B2A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A42C528C76015006B2A90 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 		1F4A42D428C76084006B2A90 /* SuffixIteratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D328C76084006B2A90 /* SuffixIteratorViewModel.swift */; };
 		1F4A42D828C760EA006B2A90 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D728C760EA006B2A90 /* TestingView.swift */; };
 		1F4A42DA28C760FA006B2A90 /* TestingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42D928C760FA006B2A90 /* TestingViewModel.swift */; };
+		1F77D11D28C779CB007403C6 /* EmojiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D11C28C779CB007403C6 /* EmojiProvider.swift */; };
+		1F77D11E28C779CB007403C6 /* EmojiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D11C28C779CB007403C6 /* EmojiProvider.swift */; };
+		1F77D12328C78190007403C6 /* EmojiWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D12228C78190007403C6 /* EmojiWidgetView.swift */; };
+		1F77D12428C782AD007403C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A42C328C76013006B2A90 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +70,10 @@
 		1F4A42D328C76084006B2A90 /* SuffixIteratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIteratorViewModel.swift; sourceTree = "<group>"; };
 		1F4A42D728C760EA006B2A90 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		1F4A42D928C760FA006B2A90 /* TestingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewModel.swift; sourceTree = "<group>"; };
+		1F77D11C28C779CB007403C6 /* EmojiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiProvider.swift; sourceTree = "<group>"; };
+		1F77D11F28C77A83007403C6 /* App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "App Extension.entitlements"; sourceTree = "<group>"; };
+		1F77D12028C77ABE007403C6 /* TestingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestingWidgetExtension.entitlements; sourceTree = "<group>"; };
+		1F77D12228C78190007403C6 /* EmojiWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 				1F081A6828C770D1004B0094 /* TestingWidget.swift */,
 				1F081A6A28C770D3004B0094 /* Assets.xcassets */,
 				1F081A6C28C770D3004B0094 /* Info.plist */,
+				1F77D11C28C779CB007403C6 /* EmojiProvider.swift */,
+				1F77D12228C78190007403C6 /* EmojiWidgetView.swift */,
 			);
 			path = TestingWidget;
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 		1F4A42B528C76013006B2A90 = {
 			isa = PBXGroup;
 			children = (
+				1F77D12028C77ABE007403C6 /* TestingWidgetExtension.entitlements */,
 				1F4A42C028C76013006B2A90 /* App Extension */,
 				1F081A6728C770D1004B0094 /* TestingWidget */,
 				1F081A6228C770D1004B0094 /* Frameworks */,
@@ -125,6 +140,7 @@
 		1F4A42C028C76013006B2A90 /* App Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1F77D11F28C77A83007403C6 /* App Extension.entitlements */,
 				1F4A42DC28C7610C006B2A90 /* ViewModels */,
 				1F4A42DB28C76100006B2A90 /* Views */,
 				1F4A42C128C76013006B2A90 /* App_ExtensionApp.swift */,
@@ -294,7 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F081A7728C772C2004B0094 /* TestingViewModel.swift in Sources */,
+				1F77D12328C78190007403C6 /* EmojiWidgetView.swift in Sources */,
+				1F77D12428C782AD007403C6 /* ContentView.swift in Sources */,
 				1F081A6928C770D1004B0094 /* TestingWidget.swift in Sources */,
+				1F081A7428C77193004B0094 /* SuffixIteratorView.swift in Sources */,
+				1F081A7528C772B2004B0094 /* TestingView.swift in Sources */,
+				1F081A7628C772BE004B0094 /* SuffixIteratorViewModel.swift in Sources */,
+				1F77D11E28C779CB007403C6 /* EmojiProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +331,7 @@
 				1F4A42DA28C760FA006B2A90 /* TestingViewModel.swift in Sources */,
 				1F4A42C228C76013006B2A90 /* App_ExtensionApp.swift in Sources */,
 				1F4A42D428C76084006B2A90 /* SuffixIteratorViewModel.swift in Sources */,
+				1F77D11D28C779CB007403C6 /* EmojiProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TestingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6JQR5WH86M;
@@ -354,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TestingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6JQR5WH86M;
@@ -496,6 +522,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "App Extension/App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"App Extension/Preview Content\"";
@@ -526,6 +553,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "App Extension/App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"App Extension/Preview Content\"";

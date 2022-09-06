@@ -9,23 +9,29 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    @AppStorage("emoji", store: UserDefaults(suiteName: "group.Nothing.App-Extension"))
+    var emojiData = Data()
+
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), emojiDetails: EmojiProvider.random())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        guard let emoji = try? JSONDecoder().decode(EmojiDetails.self, from: emojiData) else { return }
+        let entry = SimpleEntry(date: Date(), emojiDetails: emoji)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
+        guard let emoji = try? JSONDecoder().decode(EmojiDetails.self, from: emojiData) else { return }
+
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+            let entry = SimpleEntry(date: entryDate, emojiDetails: emoji)
             entries.append(entry)
         }
 
@@ -36,20 +42,14 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    let emojiDetails: EmojiDetails
 }
 
 struct TestingWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack{
-            NavigationLink(destination: SuffixIteratorView()) {
-                Text("QQ")
-            } .foregroundColor(.red)
-
-        Text(entry.date, style: .time)
-        Text("HI!")
-        }
+        EmojiWidgetView(emojiDetails: entry.emojiDetails)
     }
 }
 
@@ -68,7 +68,7 @@ struct TestingWidget: Widget {
 
 struct TestingWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TestingWidgetEntryView(entry: SimpleEntry(date: Date()))
+        TestingWidgetEntryView(entry: SimpleEntry(date: Date(), emojiDetails: EmojiProvider.random()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
