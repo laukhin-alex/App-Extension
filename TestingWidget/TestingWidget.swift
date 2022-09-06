@@ -42,7 +42,14 @@ struct TestingWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
+        VStack{
+            NavigationLink(destination: SuffixIteratorView()) {
+                Text("QQ")
+            } .foregroundColor(.red)
+
         Text(entry.date, style: .time)
+        Text("HI!")
+        }
     }
 }
 
