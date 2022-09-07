@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var tabSelection: Int = 0
-
+    @AppStorage("Suffix", store: UserDefaults(suiteName: "group.Nothing.App-Extension"))
+    var suffix = Data()
+    
     var body: some View {
         TabView(selection: $tabSelection) {
             SuffixIteratorView()

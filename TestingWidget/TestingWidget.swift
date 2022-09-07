@@ -8,7 +8,11 @@
 import WidgetKit
 import SwiftUI
 
+
 struct Provider: TimelineProvider {
+    @AppStorage("Suffix", store: UserDefaults(suiteName: "group.Nothing.App-Extension"))
+    var suffix = Data()
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
