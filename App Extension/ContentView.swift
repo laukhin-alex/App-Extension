@@ -15,14 +15,21 @@ struct ContentView: View {
             SuffixIteratorView()
                 .tag(0)
                 .tabItem {
-                    Label("Suffix", systemImage: "textformat.abc.dottedunderline")
+                    Label("Text field", systemImage: "textformat.abc.dottedunderline")
                 }
 
-            TestingView()
+            ResultView()
                 .tag(1)
                 .tabItem {
-                    Label("Test", systemImage: "testtube.2")
+                    Label("Result", systemImage: "checkmark.seal.fill")
                 }
+        }
+        .onOpenURL { url in
+            if url == (URL(string: Links.textView)!) {
+                tabSelection = 0
+            } else if url == (URL(string: Links.resultView)!){
+                tabSelection = 1
+            }
         }
     }
 

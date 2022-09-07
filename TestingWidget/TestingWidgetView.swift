@@ -10,12 +10,31 @@ import WidgetKit
 
 struct TestingWidgetView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Spacer()
+                Link(destination: URL(string: Links.textView)!) {
+                    HStack{
+                        Image(systemName: "textformat.abc.dottedunderline")
+                        .frame(width: 15.0, height: 15.0)
+                        Text("Text field")
+                    }
+                }
+                .foregroundColor(.blue)
+                Spacer()
+                Link(destination: URL(string: Links.resultView)!) {
+                    HStack{
+                        Image(systemName: "checkmark.seal.fill")
+                            .padding(.trailing)
+                        .frame(width: 15.0, height: 15.0)
+                    Text("Results")
+                    }
+                }
+                .foregroundColor(.red)
+                Spacer()
+            }
+        }
     }
+
 }
 
-struct TestingWidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestingWidgetView()
-    }
-}
