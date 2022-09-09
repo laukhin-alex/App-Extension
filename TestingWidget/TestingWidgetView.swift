@@ -11,18 +11,19 @@ import WidgetKit
 struct TestingWidgetView: View {
     var body: some View {
         ZStack{
+            Color(UIColor.systemIndigo)
             VStack{
                 Spacer()
-                Link(destination: URL(string: Links.textView)!) {
+                Link(destination: Links.textView) {
                     HStack{
                         Image(systemName: "textformat.abc.dottedunderline")
                         .frame(width: 15.0, height: 15.0)
                         Text("Text field")
                     }
                 }
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
                 Spacer()
-                Link(destination: URL(string: Links.resultView)!) {
+                Link(destination: Links.resultView) {
                     HStack{
                         Image(systemName: "checkmark.seal.fill")
                             .padding(.trailing)

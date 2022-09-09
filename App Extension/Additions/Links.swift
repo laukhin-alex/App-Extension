@@ -8,7 +8,7 @@
 import Foundation
 
 enum Links {
-    static let textView = "widget://textView/"
-    static let resultView = "widget://resultView/"
+    static let textView: URL = "widget://textView/"
+    static let resultView: URL = "widget://resultView/"
 
 }

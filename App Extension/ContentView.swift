@@ -27,9 +27,9 @@ struct ContentView: View {
                 }
         }
         .onOpenURL { url in
-            if url == (URL(string: Links.textView)!) {
+            if url == Links.textView {
                 tabSelection = 0
-            } else if url == (URL(string: Links.resultView)!){
+            } else if url == Links.resultView {
                 tabSelection = 1
             }
         }
