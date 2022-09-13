@@ -4,18 +4,39 @@
 //
 //  Created by Александр on 07.09.2022.
 //
-
-import SwiftUI
 import WidgetKit
+import SwiftUI
+import Intents
 
-struct TestingWidgetView: View {
+struct MainWidgetView: View {
+    var top3: Array<String>
+    @Environment(\.widgetFamily) var family
+    @ViewBuilder
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        ZStack {
+            Color(UIColor.systemCyan)
+            VStack{
+                Spacer()
+                Link(destination: URL(string: Links.newTextPath)!, label: {
+                    Text("Add word")
+                        .foregroundColor(Color.blue)
+                        .font(.title)
 
-struct TestingWidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestingWidgetView()
+                })
+                if (family != .systemSmall){
+                    Spacer()
+                    Link(destination: URL(string: Links.historyPath)!, label: {
+                        Text("History")
+                            .foregroundColor(Color.blue)
+                            .font(.title)
+                    })
+                }
+                Spacer()
+                ForEach(top3, id: \.self) { string in
+                    Text(string)
+                }
+                Spacer()
+            }
+        }
     }
 }
