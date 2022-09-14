@@ -1,10 +1,5 @@
 import Foundation
 
-enum JobQueueError: Error {
-    case badTimeStart
-    case unknownError
-}
-
 enum TabIdentifier: Hashable {
     case newText
     case resultView

@@ -3,6 +3,7 @@ import UIKit
 
 struct TextView: View {
     @State private var text: String = ""
+    @State var showsAlert = false
     @EnvironmentObject var suffixModel: SuffixModel
 
     var body: some View {
@@ -19,10 +20,25 @@ struct TextView: View {
                 })
                 .onAppear()
             Button("Create suffix array") {
-                UIApplication.shared.endEditing()
-                self.suffixModel.addNewValues(text)
-                text = ""
+                if text == "" {
+                    showsAlert = true
+                } else {
+                    UIApplication.shared.endEditing()
+                    self.suffixModel.addNewValues(text)
+                    text = ""
+                    showsAlert = false
+                }
+
             }
+
+            .alert(isPresented: $showsAlert) {
+                Alert(title: Text("Empty text!"))
+            }
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(20)
+            .foregroundColor(.white)
+            .padding(10)
             Spacer()
         }
     }

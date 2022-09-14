@@ -16,13 +16,10 @@
 		1F4A42C628C76015006B2A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A42C528C76015006B2A90 /* Assets.xcassets */; };
 		1F4A42C928C76015006B2A90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A42C828C76015006B2A90 /* Preview Assets.xcassets */; };
 		1FB3A57228C8ABB000924A59 /* TestingWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB3A57028C8AAB500924A59 /* TestingWidgetView.swift */; };
-		1FFED94328D0A96000BBCF3C /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED92F28D0A96000BBCF3C /* JobScheduler.swift */; };
 		1FFED94528D0A96000BBCF3C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93128D0A96000BBCF3C /* Enums.swift */; };
-		1FFED94728D0A96000BBCF3C /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93228D0A96000BBCF3C /* JobQueue.swift */; };
 		1FFED94928D0A96000BBCF3C /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93328D0A96000BBCF3C /* Links.swift */; };
 		1FFED94D28D0A96000BBCF3C /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93528D0A96000BBCF3C /* ResultView.swift */; };
 		1FFED95128D0A96000BBCF3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93828D0A96000BBCF3C /* Extensions.swift */; };
-		1FFED95328D0A96000BBCF3C /* Profiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93928D0A96000BBCF3C /* Profiler.swift */; };
 		1FFED95528D0A96000BBCF3C /* CellResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93A28D0A96000BBCF3C /* CellResultView.swift */; };
 		1FFED95728D0A96000BBCF3C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93B28D0A96000BBCF3C /* TextView.swift */; };
 		1FFED95928D0A96000BBCF3C /* SuffixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFED93C28D0A96000BBCF3C /* SuffixModel.swift */; };
@@ -68,13 +65,10 @@
 		1F4A42C528C76015006B2A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4A42C828C76015006B2A90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FB3A57028C8AAB500924A59 /* TestingWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingWidgetView.swift; sourceTree = "<group>"; };
-		1FFED92F28D0A96000BBCF3C /* JobScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		1FFED93128D0A96000BBCF3C /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		1FFED93228D0A96000BBCF3C /* JobQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
 		1FFED93328D0A96000BBCF3C /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		1FFED93528D0A96000BBCF3C /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1FFED93828D0A96000BBCF3C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		1FFED93928D0A96000BBCF3C /* Profiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profiler.swift; sourceTree = "<group>"; };
 		1FFED93A28D0A96000BBCF3C /* CellResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellResultView.swift; sourceTree = "<group>"; };
 		1FFED93B28D0A96000BBCF3C /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		1FFED93C28D0A96000BBCF3C /* SuffixModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixModel.swift; sourceTree = "<group>"; };
@@ -198,20 +192,9 @@
 			path = Suffix;
 			sourceTree = "<group>";
 		};
-		1F8BE13828D0C82B00DBA95A /* JobQueue */ = {
-			isa = PBXGroup;
-			children = (
-				1FFED93928D0A96000BBCF3C /* Profiler.swift */,
-				1FFED93228D0A96000BBCF3C /* JobQueue.swift */,
-				1FFED92F28D0A96000BBCF3C /* JobScheduler.swift */,
-			);
-			path = JobQueue;
-			sourceTree = "<group>";
-		};
 		1FFED96928D0AF2200BBCF3C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1F8BE13828D0C82B00DBA95A /* JobQueue */,
 				1F8BE13728D0C81100DBA95A /* Suffix */,
 			);
 			path = ViewModels;
@@ -328,20 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FFED95328D0A96000BBCF3C /* Profiler.swift in Sources */,
 				1FFED95528D0A96000BBCF3C /* CellResultView.swift in Sources */,
 				1FFED95928D0A96000BBCF3C /* SuffixModel.swift in Sources */,
 				1FFED95F28D0A96000BBCF3C /* ContentView.swift in Sources */,
 				1FFED95D28D0A96000BBCF3C /* ArrayHistoryView.swift in Sources */,
 				1FFED94D28D0A96000BBCF3C /* ResultView.swift in Sources */,
-				1FFED94728D0A96000BBCF3C /* JobQueue.swift in Sources */,
 				1FFED95728D0A96000BBCF3C /* TextView.swift in Sources */,
 				1FFED94928D0A96000BBCF3C /* Links.swift in Sources */,
 				1FFED94528D0A96000BBCF3C /* Enums.swift in Sources */,
 				1FFED95128D0A96000BBCF3C /* Extensions.swift in Sources */,
 				1FFED95B28D0A96000BBCF3C /* SuffixArray.swift in Sources */,
 				1F4A42C228C76013006B2A90 /* App_ExtensionApp.swift in Sources */,
-				1FFED94328D0A96000BBCF3C /* JobScheduler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
