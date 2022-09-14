@@ -1,10 +1,3 @@
-//
-//  SuffixArray.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-03-30.
-//
-
 import Foundation
 
 struct SuffixArray: Sequence {

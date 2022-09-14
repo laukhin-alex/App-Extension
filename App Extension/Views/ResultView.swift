@@ -1,10 +1,3 @@
-//
-//  ResultView.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-03-28.
-//
-
 import SwiftUI
 
 let topCountValue = 10
@@ -42,14 +35,14 @@ struct ListValues: View {
         if selection == SegmentIdentifier.allValues.rawValue{
             List {
                 ForEach(sorted, id: \.self) { (key) in
-                    CellRes(firstValue: key, secondValue: (self.suffixModel.suffixValues[key] ?? 0))
+                    CellResultView(firstValue: key, secondValue: (self.suffixModel.suffixValues[key] ?? 0))
                 }
             }.opacity(sorted.isEmpty ? 0:1)
         }
         else if selection == SegmentIdentifier.only3.rawValue{
             List {
                 ForEach(sorted, id: \.self) { (key) in
-                    CellRes(firstValue: key, secondValue: (self.suffixModel.threeLetterSuffixes[key] ?? 0))
+                    CellResultView(firstValue: key, secondValue: (self.suffixModel.threeLetterSuffixes[key] ?? 0))
                 }
             }.opacity(sorted.isEmpty ? 0:1)
         }

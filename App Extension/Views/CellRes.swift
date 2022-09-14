@@ -1,13 +1,6 @@
-//
-//  CellRes.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-05-14.
-//
-
 import SwiftUI
 
-struct CellRes: View {
+struct CellResultView: View {
     var firstValue: Substring
     var secondValue: Int
     var body: some View {
@@ -21,6 +14,6 @@ struct CellRes: View {
 
 struct CellRes_Previews: PreviewProvider {
     static var previews: some View {
-        CellRes(firstValue: "text", secondValue: 1)
+        CellResultView(firstValue: "text", secondValue: 1)
     }
 }

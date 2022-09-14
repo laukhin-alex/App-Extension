@@ -1,10 +1,3 @@
-//
-//  TestingWidget.swift
-//  TestingWidget
-//
-//  Created by Александр on 06.09.2022.
-//
-
 import WidgetKit
 import SwiftUI
 import Intents

@@ -1,10 +1,3 @@
-//
-//  DateExtension.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-04-17.
-//
-
 import Foundation
 import UIKit
 

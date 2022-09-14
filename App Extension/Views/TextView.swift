@@ -1,14 +1,7 @@
-//
-//  MainView.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-03-28.
-//
-
 import SwiftUI
 import UIKit
 
-struct MainView: View {
+struct TextView: View {
     @State private var text: String = ""
     @EnvironmentObject var suffixModel: SuffixModel
 
@@ -37,6 +30,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        TextView()
     }
 }

@@ -1,13 +1,6 @@
-//
-//  SwiftUIView.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-05-14.
-//
-
 import SwiftUI
 
-struct FeedView: View {
+struct ArrayHistoryView: View {
     @EnvironmentObject var suffixModel: SuffixModel
 
     var body: some View {
@@ -21,8 +14,3 @@ struct FeedView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView()
-    }
-}

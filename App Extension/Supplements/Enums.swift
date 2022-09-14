@@ -1,10 +1,3 @@
-//
-//  CommonValues.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-04-18.
-//
-
 import Foundation
 
 enum JobQueueError: Error {

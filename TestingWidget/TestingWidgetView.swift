@@ -15,25 +15,45 @@ struct MainWidgetView: View {
     var body: some View {
         ZStack {
             Color(UIColor.systemCyan)
-            VStack{
-                Spacer()
-                Link(destination: URL(string: Links.newTextPath)!, label: {
-                    Text("Add word")
-                        .foregroundColor(Color.blue)
-                        .font(.title)
-
-                })
-                if (family != .systemSmall){
+            HStack{
+                VStack(alignment: .leading){
                     Spacer()
-                    Link(destination: URL(string: Links.historyPath)!, label: {
-                        Text("History")
-                            .foregroundColor(Color.blue)
+                    Link(destination: URL(string: Links.newTextPath)!, label: {
+                        Text("New text")
+                            .foregroundColor(Color.white)
                             .font(.title)
+                            .multilineTextAlignment(.leading)
+
                     })
+                    if (family != .systemSmall){
+                        Spacer()
+                        Link(destination: URL(string: Links.resultPath)!, label: {
+                            Text("Result")
+                                .foregroundColor(Color.blue)
+                                .font(.title)
+                                .multilineTextAlignment(.leading)
+                        })
+                        Spacer()
+                        Link(destination: URL(string: Links.historyPath)!, label: {
+                            Text("History")
+                                .foregroundColor(Color.red)
+                                .font(.title)
+                                .multilineTextAlignment(.leading)
+                        })
+                    }
+                    Spacer()
                 }
-                Spacer()
-                ForEach(top3, id: \.self) { string in
-                    Text(string)
+                .padding(.horizontal)
+                VStack(alignment: .leading){
+                    Spacer()
+                    ForEach(top3, id: \.self) { string in
+                        Text(string)
+                            .font(.title)
+                            .foregroundColor(Color.yellow)
+                        Spacer()
+
+                    }
+
                 }
                 Spacer()
             }

@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  AppWithWidget
-//
-//  Created by Natalia Andryushina on 2022-03-28.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -17,7 +10,7 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $activeTab) {
-            MainView()
+            TextView()
                 .environmentObject(suffixModel)
                 .tabItem {
                     Image(systemName: "text.magnifyingglass")
@@ -31,7 +24,7 @@ struct ContentView: View {
                     Text("Result")
                 }
                 .tag(TabIdentifier.resultView)
-            FeedView()
+            ArrayHistoryView()
                 .environmentObject(suffixModel)
                 .tabItem {
                     Image(systemName: "square.fill.text.grid.1x2")
